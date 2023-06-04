@@ -8,7 +8,7 @@ document.getElementById('random').addEventListener('click', function() {
 document.getElementById('all'),
 addEventListener('click', function() {
     fetchAllCharacters();
-})
+});
 
 searchInput.addEventListener('keyup', function() {
 
@@ -30,7 +30,7 @@ function fetchRandomCharacter() {
         <p>Gender: ${data.gender}</p>`;
     })
     .catch(error => console.log('Error: ', error));
-}
+};
 function fetchAllCharacters() {
     fetch('https://swapi.dev/api/people/')
     .then(response => response.json())
@@ -52,7 +52,7 @@ function fetchAllCharacters() {
                 <p>Eye Color: ${character.eye_color}</p>
                 <p>Birth Year: ${character.birth_year}</p>
                 <p>Gender: ${character.gender}</p>`;
-            })
+            });
             charactersList.appendChild(li);
         })
     })
